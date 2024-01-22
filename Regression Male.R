@@ -17,6 +17,8 @@ dat$height = dat$height2002 / 100
 dat$BMI = dat$weight / (dat$height)^2
 dat$white_BMI = dat$white * dat$BMI
 dat$black_BMI = dat$black *dat$BMI
+dat$hispanic_BMI = dat$hispanic * dat$BMI
+dat$mixed_BMI = dat$mixed * dat$BMI
 dat$ln_wage = log(dat$wage)
 dat$tenure = dat$tenure2017
 dat$tenure_sq = (dat$tenure)^2
@@ -24,9 +26,11 @@ dat$tenure_sq = (dat$tenure)^2
 if(T){
   model_male = lm( 
     ln_wage ~ 
-      1 +  BMI + white_BMI + black_BMI + hdegree + tenure + tenure_sq,
+      1 + height + BMI + black + hispanic + mixed + black_BMI + hispanic_BMI + mixed_BMI + hdegree + ASVAB + tenure + tenure_sq,
     data = dat
   )
 }
 
+sink("summary_male_model")
 summary(model_male)
+sink()
