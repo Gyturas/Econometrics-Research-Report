@@ -1,0 +1,32 @@
+
+Call:
+lm(formula = ln_wage ~ 1 + height + BMI + black + hispanic + 
+    mixed + black_BMI + hispanic_BMI + mixed_BMI + hdegree + 
+    ASVAB + tenure + tenure_sq, data = dat)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5.0376 -0.3475 -0.0300  0.3249  3.9388 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   6.477e+00  3.415e-01  18.968  < 2e-16 ***
+height        3.436e-01  1.763e-01   1.949 0.051486 .  
+BMI           8.698e-05  3.300e-03   0.026 0.978973    
+black        -3.513e-01  1.612e-01  -2.179 0.029472 *  
+hispanic     -4.557e-01  1.895e-01  -2.404 0.016299 *  
+mixed         1.146e+00  6.557e-01   1.748 0.080560 .  
+black_BMI     4.659e-03  5.205e-03   0.895 0.370905    
+hispanic_BMI  1.327e-02  6.157e-03   2.155 0.031326 *  
+mixed_BMI    -3.677e-02  2.102e-02  -1.749 0.080468 .  
+hdegree       1.579e-01  1.326e-02  11.907  < 2e-16 ***
+ASVAB         2.430e-06  6.464e-07   3.759 0.000176 ***
+tenure        1.212e-03  1.877e-04   6.456 1.39e-10 ***
+tenure_sq    -1.088e-06  2.242e-07  -4.853 1.32e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.6304 on 1744 degrees of freedom
+Multiple R-squared:  0.2169,	Adjusted R-squared:  0.2115 
+F-statistic: 40.24 on 12 and 1744 DF,  p-value: < 2.2e-16
+
