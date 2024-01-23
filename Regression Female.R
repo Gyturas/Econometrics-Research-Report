@@ -29,7 +29,7 @@ dat$tenure_sq = (dat$tenure)^2
 if(T){
   model_female = lm( 
     ln_wage ~ 
-      1 + height + BMI + black + hispanic + mixed + black_BMI + hispanic_BMI + mixed_BMI + hdegree + tenure + ASVAB + tenure_sq,
+      1 + height + BMI + black + hispanic + mixed + black_BMI + hispanic_BMI + mixed_BMI + hdegree + ASVAB + tenure + tenure_sq,
     data = dat
     )
 }
